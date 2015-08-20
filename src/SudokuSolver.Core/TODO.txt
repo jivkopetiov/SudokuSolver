@@ -1,0 +1,16 @@
+﻿- Allow the choice of which algorithms to use via checkboxes
+
+- add more puzzles which test the random algorithm
+
+- Ability to change tick speed of automated solving
+
+- Implement hidden pairs for column
+- Implement hidden triples
+- Implement box/line reduction
+- Implement X-Wing
+- Swordfish
+
+- try app with very difficult or unsolvable puzzles
+- Show timer with the elapsed time of solving
+
+bug - if you click multiple times of go to start and go to end buttons, it will not work very well

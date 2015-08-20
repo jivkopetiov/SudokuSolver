@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F7C1E73-89F4-4002-BE6A-4B694D736578}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SudokuSolver.Core</RootNamespace>
+    <AssemblyName>SudokuSolver.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile158</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithms\Algorithm.cs" />
+    <Compile Include="Algorithms\HiddenPairsInRowAlgorithm.cs" />
+    <Compile Include="Algorithms\HiddenPairsInSquareAlgorithm.cs" />
+    <Compile Include="Algorithms\NakedPairsInColumnAlgorithm.cs" />
+    <Compile Include="Algorithms\NakedPairsInRowAlgorithm.cs" />
+    <Compile Include="Algorithms\NakedPairsInSquareAlgorithm.cs" />
+    <Compile Include="Algorithms\NakedTriplesInColumnAlgorithm.cs" />
+    <Compile Include="Algorithms\NakedTriplesInRowAlgorithm.cs" />
+    <Compile Include="Algorithms\NakedTriplesInSquareAlgorithm.cs" />
+    <Compile Include="Algorithms\PointingPairsAlgorithm.cs" />
+    <Compile Include="Algorithms\RandomMoveAlgorithm.cs" />
+    <Compile Include="Algorithms\RefreshPossiblesAlgorithm.cs" />
+    <Compile Include="Algorithms\SingleAlgorithm.cs" />
+    <Compile Include="Algorithms\SingleInColumnAlgorithm.cs" />
+    <Compile Include="Algorithms\SingleInRowAlgorithm.cs" />
+    <Compile Include="Algorithms\SingleInSquareAlgorithm.cs" />
+    <Compile Include="Infrastructure\StringEx.cs" />
+    <Compile Include="Moves\Move.cs" />
+    <Compile Include="Moves\ReducePossibilitiesMove.cs" />
+    <Compile Include="Moves\SolveNumberMove.cs" />
+    <Compile Include="PredefinedPuzzles.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Puzzle.cs" />
+    <Compile Include="PuzzleGroup.cs" />
+    <Compile Include="SolverEngine.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Portable.Runtime">
+      <HintPath>..\..\lib\Portable.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
